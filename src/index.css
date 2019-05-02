@@ -1,1 +1,5 @@
-/* Some line of code about css */
+#app-container {
+}
+@import url("./components/common/footer/footer.css");
+@import url("./components/common/header/header.css");
+@import url("./components/common/sidenav/sidenav.css");

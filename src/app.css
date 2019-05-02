@@ -1,0 +1,19 @@
+.app__main {
+    min-height: 100vh;
+    display: inline-block;
+}
+
+.app__sidenav {
+    width: 250px;
+    height: 100vh;
+    display: inline-block;
+    overflow: hidden;
+    -webkit-box-shadow: 2px 0 4px -2px #888;
+    box-shadow: 2px 0 4px -2px #888;
+}
+
+.app__container {
+    width: 100vh;
+    height: 100vh;
+    display: inline-block;
+}
