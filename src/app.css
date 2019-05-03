@@ -17,3 +17,8 @@
     height: 100vh;
     display: inline-block;
 }
+
+.app__container .container {
+    height: 100vh;
+
+}

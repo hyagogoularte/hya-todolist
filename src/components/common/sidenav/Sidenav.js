@@ -17,27 +17,26 @@ export default class Sidenav extends Component {
     return (
       <div className="sidenav__container">
         <UserInfo user={ this.state.user } />
-        sidenav
       </div>
     )
   }
 }
 
-function UserInfo(props) {
+const UserInfo = ({user}) => {
     return (
         <div className="sidenav__user-info">
-           <Avatar user={props.user} />
-            <h4>{props.user.name}</h4>
-            <h5>{props.user.description}</h5>
+           <Avatar user={user} />
+            <h4>{user.name}</h4>
+            <h5>{user.description}</h5>
         </div>
     );
 }
 
 
-function Avatar(props) {
+const Avatar = ({user}) => {
     return (
         <div className="user-info__avatar">
-            <img src={props.user.image} alt={props.user.name} />
+            <img src={user.image} alt={user.name} />
         </div>
     );
 }

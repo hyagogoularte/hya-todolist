@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Todo from './components/todo/Todo';
+import TodoList from './components/todos/Todos';
 import Header from './components/common/header/Header';
 import Footer from './components/common/footer/Footer';
 import Sidenav from  './components/common/sidenav/Sidenav';
@@ -9,23 +9,23 @@ export default class App extends Component {
   render() {
     return (
         <div className="had-container app">
-          <div className="app__header">
+          <header className="app__header">
               <Header />
-          </div>
+          </header>
           <div className="row">
             
-            <section className="app__sidenav">
+            <section className="col app__sidenav">
               <Sidenav />
             </section>
 
             <section className="app__container">
-              <div className="container">
-                <Todo />
-              </div>
+              <main className="container">
+                <TodoList />
+              </main>
 
-              <div className="had-container app_footer">
+              <footer className="had-container app_footer">
                 <Footer />
-              </div>
+              </footer>
             </section>
               
           </div>
