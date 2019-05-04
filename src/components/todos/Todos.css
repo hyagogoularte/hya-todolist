@@ -1,6 +1,6 @@
 .todos {
     width: 250px;
-    height: 100%;
+    height: inherit;
 }
 
 .todos .todos__list {

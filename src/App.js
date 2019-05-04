@@ -2,34 +2,41 @@ import React, { Component } from 'react';
 import TodoList from './components/todos/Todos';
 import Header from './components/common/header/Header';
 import Footer from './components/common/footer/Footer';
-import Sidenav from  './components/common/sidenav/Sidenav';
+import Sidenav from './components/common/sidenav/Sidenav';
 import './app.css';
 
 export default class App extends Component {
-  render() {
-    return (
-        <div className="had-container app">
-          <header className="app__header">
-              <Header />
-          </header>
-          <div className="row">
-            
-            <section className="col app__sidenav">
-              <Sidenav />
-            </section>
+    render() {
+        return (
+            <div className="app__container">
 
-            <section className="app__container">
-              <main className="container">
-                <TodoList />
-              </main>
+                <header className="container__header">
+                    <Header />
+                </header>
 
-              <footer className="had-container app_footer">
-                <Footer />
-              </footer>
-            </section>
-              
-          </div>
-        </div>
-    )
-  }
+                <div className="container__main">
+
+                    <section className="main__sidenav">
+                        <Sidenav />
+                    </section>
+
+                    <main className="main__content">
+                        <header className="content__header">
+                            <h5>TodoList React APP</h5>
+                        </header>
+
+                        <section className="container">
+                            <TodoList />
+                        </section>
+
+                        <footer className="content__footer">
+                            <Footer />
+                        </footer>
+
+                    </main>
+
+                </div>
+            </div>
+        )
+    }
 }
