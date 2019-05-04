@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import TodoList from './components/todos/Todos';
+import Todos from './components/todos/Todos';
 import Header from './components/common/header/Header';
 import Footer from './components/common/footer/Footer';
 import Sidenav from './components/common/sidenav/Sidenav';
@@ -26,7 +26,7 @@ export default class App extends Component {
                         </header>
 
                         <section className="container">
-                            <TodoList />
+                            <Todos />
                         </section>
 
                         <footer className="content__footer">

@@ -44,20 +44,18 @@ class Todos extends Component {
 
     render() {
         return (
-            <div className="todos card">
+            <div className="todos">
                 <div className="todos__list">
                     <Items entries={ this.state.items } />
                 </div>
 
-                <div className="row todos__footer">
-                    <form className="col s12" onSubmit={this.addItem}>
-                        <div className="row input-field">
-                            <div className="col s9">
-                                <input ref={(a) => this._inputElement = a} placeholder="enter task" />
-                            </div>
-                            <div className="col s3">
-                                <button type="submit" className="btn">Add</button>
-                            </div>
+                <div className="todos__footer">
+                    <form className="footer__form" onSubmit={this.addItem}>
+                        <div className="form__input">
+                            <input ref={(a) => this._inputElement = a} placeholder="enter task" />
+                        </div>
+                        <div className="form__button">
+                            <button type="submit" className="btn">Add</button>
                         </div>
                     </form>
                 </div>

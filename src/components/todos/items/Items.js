@@ -10,7 +10,7 @@ class Items extends Component {
     let listItems = todoEntries.map(this.createTasks);
 
     return (
-        <ul className="todos__list">
+        <ul className="list__ul">
             { listItems }
         </ul>
     )

@@ -1,12 +1,48 @@
 .todos {
-    width: 250px;
+    width: 100%;
     height: inherit;
+    border: 1px solid black;
 }
 
-.todos .todos__list {
-
+.todos__list {
+    width: 100%;
+    height: calc(100% - 60px);
 }
 
-.todos .todos__footer {
-    
+.list__ul {
+    margin: 0px;
+}
+
+.todos__footer {
+    width: 100%;
+    height: 60px;
+
+    -webkit-box-shadow: 0 -5px 5px -5px #888;
+    box-shadow:  0 -5px 5px -5px  #888;
+}
+
+.todos__footer .row {
+    margin-bottom: 0px;
+}
+
+.todos__footer button {
+    width: 100%;
+    height: 100%;
+}
+
+.footer__form {
+    display: flex;
+    height: 100%;
+}
+
+.form__input {
+    display: flex;
+    flex: 1;
+    margin: 8px;
+}
+
+.form__button {
+    display: flex;
+    flex: 0;
+    margin: 8px;
 }
