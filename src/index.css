@@ -12,6 +12,3 @@ body {
        display: flex;  /*enables flex content for its children*/
     box-sizing: border-box;
 }
-@import url("./components/common/footer/footer.css");
-@import url("./components/common/header/header.css");
-@import url("./components/common/sidenav/sidenav.css");

@@ -25,19 +25,7 @@
     flex-direction: column;
 }
 
-.main__content .content__header {
-    width: 100%;
-    height: 60px;
-}
-
 .main__content .container {
     height: calc(100% -  30px - 60px);
 
-}
-
-.main__content .content__footer {
-    width: 100%;
-    height: 30px;
-    background: purple;
-    text-align: center;
 }

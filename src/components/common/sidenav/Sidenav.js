@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import './sidenav.css';
 
 export default class Sidenav extends Component {
     constructor(props) {
@@ -15,9 +16,15 @@ export default class Sidenav extends Component {
 
   render() {
     return (
-      <div className="sidenav__container">
-        <UserInfo user={ this.state.user } />
-      </div>
+      <section className="sidenav__container">
+        <div className="sidenav__info">
+            <UserInfo user={ this.state.user } />
+        </div>
+        <div className="sidenav__footer">
+        Sidenav Footer
+        </div>
+      </section>
+
     )
   }
 }

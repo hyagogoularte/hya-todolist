@@ -1,13 +1,23 @@
 .sidenav__container {
     width: 100%;
-    height: 100vh;
-    padding: 10px;
+    height: 100%;
+}
 
+.sidenav__info {
+    height: calc(100% - 30px);
+}
+
+.sidenav__footer {
+    height: 30px;
+    background-color: #f1f1f1;
+
+    -webkit-box-shadow: 2px 0 4px -2px #888;
+    box-shadow: 2px 0 4px -2px #888;
 }
 
 .sidenav__user-info {
     width: 100%;
-    height: 100vh;
+    height: 100%;
 }
 
 .user-info__avatar {
