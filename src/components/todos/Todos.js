@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import Items from './items/Items';
 import './Todos.css';
 
-
 class Todos extends Component {
 
     constructor(props) {
@@ -10,16 +9,18 @@ class Todos extends Component {
 
         this.state = {
             items: [
-                { id: 1, key: Date.now(), content: 'Content 01' },
-                { id: 2, key: Date.now()+1, content: 'Content 02' },
-                { id: 3, key: Date.now()+2, content: 'Content 03' }
+                { id: 1, key: Date.now(), content: 'Content 01', checked: false },
+                { id: 2, key: Date.now()+1, content: 'Content 02', checked: true },
+                { id: 3, key: Date.now()+2, content: 'Content 03', checked: false }
             ]
         }
 
-        this.addItem = this.addItem.bind(this);
+        this.handleAddItem = this.handleAddItem.bind(this);
+        this.handleDeleteItem = this.handleDeleteItem.bind(this);
+        this.handleToggleItem = this.handleToggleItem.bind(this);
     }
 
-    addItem(e) {
+    handleAddItem(e) {
         e.preventDefault();
         let value = this._inputElement.value;
         if (value === '') {
@@ -39,18 +40,42 @@ class Todos extends Component {
         });
 
         this._inputElement.value = '';
-        console.log(this.state.items);
     }
 
+    handleDeleteItem(key) {
+        var filteredItems = this.state.items.filter((item) => {
+            return (item.key !== key);
+        });
+
+        this.setState({
+            items: filteredItems
+        });
+    }
+
+    handleToggleItem(key) {
+        let items = this.state.items;
+
+        items.forEach((item) => {
+            if(item.key === key) {
+                item.checked = !item.checked;
+            }
+        });
+        this.setState({
+            items
+        });
+    }
     render() {
         return (
             <div className="todos">
                 <div className="todos__list">
-                    <Items entries={ this.state.items } />
+                    <Items entries={ this.state.items } 
+                        delete={ this.handleDeleteItem }
+                        toggle={ this.handleToggleItem }
+                    />
                 </div>
 
                 <div className="todos__footer">
-                    <form className="footer__form" onSubmit={this.addItem}>
+                    <form className="footer__form" onSubmit={this.handleAddItem}>
                         <div className="form__input">
                             <input ref={(a) => this._inputElement = a} placeholder="enter task" />
                         </div>

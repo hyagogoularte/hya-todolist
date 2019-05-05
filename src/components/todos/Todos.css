@@ -1,12 +1,12 @@
 .todos {
     width: 100%;
     height: inherit;
-    border: 1px solid black;
 }
 
 .todos__list {
     width: 100%;
     height: calc(100% - 60px);
+    overflow: hidden;
 }
 
 .list__ul {

@@ -1,0 +1,37 @@
+.list__ul {
+    height: 100%;
+    overflow: auto;
+}
+
+.list__ul li {
+    width: inherit;
+    color: #333;
+    background-color: #f3f3f3;
+    padding: 8px;
+    margin: 8px;
+    display: flex;
+    /* transition: background-coolor .2s ease-out;s */
+}
+
+.list__ul li:hover {
+    background-color: #f4f4f4;
+}
+
+.list__ul li input[type=checkbox] {
+    display: inline-flex;
+}
+
+.list__ul li span {
+    display: inline-flex;
+    flex: 1;
+    white-space: nowrap; 
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.list__ul li button {
+    display: inline-flex;
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+}
