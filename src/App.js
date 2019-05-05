@@ -5,11 +5,10 @@ import Footer from './components/common/footer/Footer';
 import Sidenav from './components/common/sidenav/Sidenav';
 import './app.css';
 
-export default class App extends Component {
+class App extends Component {
     render() {
         return (
             <div className="app__container">
-
                 <header className="container__header">
                     <Header />
                 </header>
@@ -22,7 +21,9 @@ export default class App extends Component {
 
                     <main className="main__content">
                         <header className="content__header">
-                            <h5>TodoList React APP</h5>
+                            <section className="container">
+                                <h5>TodoList React APP</h5>
+                            </section>
                         </header>
 
                         <section className="container">
@@ -32,11 +33,12 @@ export default class App extends Component {
                         <footer className="content__footer">
                             <Footer />
                         </footer>
-
                     </main>
 
                 </div>
             </div>
         )
     }
-}
+};
+
+export default App;
