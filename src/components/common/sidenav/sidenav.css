@@ -10,9 +10,22 @@
 .sidenav__footer {
     height: 30px;
     background-color: #f1f1f1;
-
+    display: flex;
     -webkit-box-shadow: 2px 0 4px -2px #888;
     box-shadow: 2px 0 4px -2px #888;
+}
+
+.footer__item {
+    text-align: center;
+    display: inline-block;
+    flex: 1;
+}
+
+.footer__item img {
+    display: inline-flex;
+    width: 26px;
+    height: 24px;
+    margin-top: 3px;
 }
 
 .sidenav__user-info {

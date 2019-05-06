@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import GithubImg from '../../../images/github.png';
+import LinkedInImg from '../../../images/linkedin.png';
 import './sidenav.css';
 
 export default class Sidenav extends Component {
@@ -21,7 +23,16 @@ export default class Sidenav extends Component {
             <UserInfo user={ this.state.user } />
         </div>
         <div className="sidenav__footer">
-        Sidenav Footer
+            <div className="footer__item">
+                <a rel="noopener noreferrer" href="https://github.com/hyagogoularte/" target="_blank">
+                    <img src={ GithubImg } alt="Github icon" />
+                </a>
+            </div>
+            <div className="footer__item">
+                <a rel="noopener noreferrer" href="https://www.linkedin.com/in/hyagogoularte/" target="_blank">
+                    <img src={ LinkedInImg } alt="Github icon" />
+                </a>
+            </div>
         </div>
       </section>
 
